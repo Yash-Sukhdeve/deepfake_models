@@ -1,0 +1,94 @@
+{
+  "out_tampered": "/home/parker/Desktop/fbi/tampering/xtts-clean/df_sub052/audio2_tampered.wav",
+  "out_tampered_copy": "/home/parker/Desktop/fbi/tampering/xtts-clean/df_sub052/temp_work_20251119T033414Z_8977/audio2_tampered.wav",
+  "metadata": {
+    "target_copy": "xtts-clean/df_sub052/temp_work_20251119T033414Z_8977/audio2.wav",
+    "donor_copy": "xtts-clean/df_sub052/temp_work_20251119T033414Z_8977/resampled.wav",
+    "replacements": [
+      {
+        "index": 0,
+        "word": "up",
+        "target_start": 7.042105263157895,
+        "target_end": 7.355789473684211,
+        "donor_start": 174.29333333333332,
+        "donor_end": 174.51999999999998,
+        "target_segment_file": "extracted_segments/00_target_up_112674_117693.wav",
+        "donor_segment_file": "extracted_segments/00_donor_up_2788693_2792320.wav",
+        "donor_matched_file": "processed_segments/00_donor_matched_up.wav",
+        "applied_duration_s": 0.3136875
+      },
+      {
+        "index": 1,
+        "word": "under",
+        "target_start": 1.9444444444444446,
+        "target_end": 2.2222222222222223,
+        "donor_start": 70.896,
+        "donor_end": 71.344,
+        "target_segment_file": "extracted_segments/01_target_under_31111_35556.wav",
+        "donor_segment_file": "extracted_segments/01_donor_under_1134336_1141504.wav",
+        "donor_matched_file": "processed_segments/01_donor_matched_under.wav",
+        "applied_duration_s": 0.27775
+      },
+      {
+        "index": 2,
+        "word": "down",
+        "target_start": 0.8333333333333334,
+        "target_end": 1.1111111111111112,
+        "donor_start": 360.0882352941176,
+        "donor_end": 360.38235294117646,
+        "target_segment_file": "extracted_segments/02_target_down_13333_17778.wav",
+        "donor_segment_file": "extracted_segments/02_donor_down_5761412_5766118.wav",
+        "donor_matched_file": "processed_segments/02_donor_matched_down.wav",
+        "applied_duration_s": 0.27775
+      },
+      {
+        "index": 3,
+        "word": "back",
+        "target_start": 0.5555555555555556,
+        "target_end": 0.8333333333333334,
+        "donor_start": 343.0,
+        "donor_end": 343.4166666666667,
+        "target_segment_file": "extracted_segments/03_target_back_8889_13333.wav",
+        "donor_segment_file": "extracted_segments/03_donor_back_5488000_5494667.wav",
+        "donor_matched_file": "processed_segments/03_donor_matched_back.wav",
+        "applied_duration_s": 0.27775
+      },
+      {
+        "index": 4,
+        "word": "one",
+        "target_start": 8.296842105263158,
+        "target_end": 8.610526315789475,
+        "donor_start": 156.47,
+        "donor_end": 156.875,
+        "target_segment_file": "extracted_segments/04_target_one_132749_137768.wav",
+        "donor_segment_file": "extracted_segments/04_donor_one_2503520_2510000.wav",
+        "donor_matched_file": "processed_segments/04_donor_matched_one.wav",
+        "applied_duration_s": 0.3136875
+      },
+      {
+        "index": 5,
+        "word": "water",
+        "target_start": 6.414736842105263,
+        "target_end": 6.728421052631579,
+        "donor_start": 271.01384615384615,
+        "donor_end": 271.2846153846154,
+        "target_segment_file": "extracted_segments/05_target_water_102636_107655.wav",
+        "donor_segment_file": "extracted_segments/05_donor_water_4336222_4340554.wav",
+        "donor_matched_file": "processed_segments/05_donor_matched_water.wav",
+        "applied_duration_s": 0.3136875
+      },
+      {
+        "index": 6,
+        "word": "than",
+        "target_start": 9.551578947368423,
+        "target_end": 9.86526315789474,
+        "donor_start": 293.2314285714286,
+        "donor_end": 293.56,
+        "target_segment_file": "extracted_segments/06_target_than_152825_157844.wav",
+        "donor_segment_file": "extracted_segments/06_donor_than_4691703_4696960.wav",
+        "donor_matched_file": "processed_segments/06_donor_matched_than.wav",
+        "applied_duration_s": 0.3136875
+      }
+    ]
+  }
+}

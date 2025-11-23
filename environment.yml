@@ -1,0 +1,141 @@
+/home/lab2208/anaconda3/lib/python3.11/site-packages/conda/base/context.py:211: FutureWarning: Adding 'defaults' to channel list implicitly is deprecated and will be removed in 25.9. 
+
+To remove this warning, please choose a default channel explicitly with conda's regular configuration system, e.g. by adding 'defaults' to the list of channels:
+
+  conda config --add channels defaults
+
+For more information see https://docs.conda.io/projects/conda/en/stable/user-guide/configuration/use-condarc.html
+
+  deprecated.topic(
+name: xls_r_test
+channels:
+  - defaults
+dependencies:
+  - _libgcc_mutex=0.1
+  - _openmp_mutex=5.1
+  - ca-certificates=2025.11.4
+  - certifi=2022.12.7
+  - ld_impl_linux-64=2.44
+  - libffi=3.4.4
+  - libgcc=15.2.0
+  - libgcc-ng=15.2.0
+  - libgomp=15.2.0
+  - libstdcxx=15.2.0
+  - libstdcxx-ng=15.2.0
+  - libxcb=1.17.0
+  - libzlib=1.3.1
+  - ncurses=6.5
+  - openssl=1.1.1w
+  - pip=22.3.1
+  - pthread-stubs=0.3
+  - python=3.7.16
+  - readline=8.3
+  - setuptools=65.6.3
+  - sqlite=3.51.0
+  - tk=8.6.15
+  - wheel=0.38.4
+  - xorg-libx11=1.8.12
+  - xorg-libxau=1.0.12
+  - xorg-libxdmcp=1.1.5
+  - xorg-xorgproto=2024.1
+  - xz=5.6.4
+  - zlib=1.3.1
+  - pip:
+      - aiofiles==23.2.1
+      - aiohttp==3.8.6
+      - aiosignal==1.3.1
+      - altair==5.0.1
+      - annotated-types==0.5.0
+      - antlr4-python3-runtime==4.8
+      - anyio==3.7.1
+      - async-timeout==4.0.3
+      - asynctest==0.13.0
+      - attrs==24.2.0
+      - audioread==3.0.1
+      - bitarray==3.8.0
+      - cffi==1.15.1
+      - charset-normalizer==3.4.4
+      - click==8.1.8
+      - colorama==0.4.6
+      - cycler==0.11.0
+      - cython==3.0.12
+      - exceptiongroup==1.3.0
+      - fairseq==1.0.0a0+89a09ac
+      - fastapi==0.103.2
+      - ffmpy==0.3.2
+      - filelock==3.12.2
+      - fonttools==4.38.0
+      - frozenlist==1.3.3
+      - fsspec==2023.1.0
+      - gradio==3.34.0
+      - gradio-client==0.2.6
+      - h11==0.14.0
+      - httpcore==0.17.3
+      - httpx==0.24.1
+      - huggingface-hub==0.16.4
+      - hydra-core==1.0.7
+      - idna==3.10
+      - importlib-metadata==6.7.0
+      - importlib-resources==5.12.0
+      - jinja2==3.1.6
+      - joblib==1.3.2
+      - jsonschema==4.17.3
+      - kiwisolver==1.4.5
+      - librosa==0.9.1
+      - linkify-it-py==2.0.3
+      - llvmlite==0.39.1
+      - lxml==5.4.0
+      - markdown-it-py==2.2.0
+      - markupsafe==2.1.5
+      - matplotlib==3.5.3
+      - mdit-py-plugins==0.3.3
+      - mdurl==0.1.2
+      - multidict==6.0.5
+      - numba==0.56.4
+      - numpy==1.21.6
+      - omegaconf==2.0.6
+      - orjson==3.9.7
+      - pandas==1.3.5
+      - pillow==9.5.0
+      - pkgutil-resolve-name==1.3.10
+      - platformdirs==4.0.0
+      - pooch==1.8.2
+      - portalocker==2.7.0
+      - protobuf==3.20.0
+      - pycparser==2.21
+      - pydantic==2.5.3
+      - pydantic-core==2.14.6
+      - pydub==0.25.1
+      - pyparsing==3.1.4
+      - pyrsistent==0.19.3
+      - python-multipart==0.0.8
+      - pytz==2025.2
+      - pyyaml==6.0.1
+      - regex==2024.4.16
+      - requests==2.31.0
+      - resampy==0.4.3
+      - sacrebleu==2.4.2
+      - scikit-learn==1.0.2
+      - scipy==1.7.3
+      - seaborn==0.12.2
+      - semantic-version==2.10.0
+      - six==1.17.0
+      - sniffio==1.3.1
+      - soundfile==0.13.1
+      - starlette==0.27.0
+      - tabulate==0.9.0
+      - tensorboardx==2.5
+      - threadpoolctl==3.1.0
+      - toolz==0.12.1
+      - torch==1.12.1+cu116
+      - torchaudio==0.12.1+cu116
+      - torchvision==0.13.1
+      - tqdm==4.67.1
+      - typing-extensions==4.7.1
+      - uc-micro-py==1.0.3
+      - urllib3==2.0.7
+      - uvicorn==0.22.0
+      - websockets==11.0.3
+      - yarl==1.9.4
+      - zipp==3.15.0
+prefix: /home/lab2208/anaconda3/envs/xls_r_test

@@ -1,0 +1,9 @@
+{
+  "out_tampered": "/home/parker/Desktop/fbi/tampering/xtts-clean/Subject14_Original_Mic2/audio1_tampered.wav",
+  "out_tampered_copy": "/home/parker/Desktop/fbi/tampering/xtts-clean/Subject14_Original_Mic2/temp_work_20251119T015418Z_3458/audio1_tampered.wav",
+  "metadata": {
+    "target_copy": "xtts-clean/Subject14_Original_Mic2/temp_work_20251119T015418Z_3458/audio1.wav",
+    "donor_copy": "xtts-clean/Subject14_Original_Mic2/temp_work_20251119T015418Z_3458/resampled.wav",
+    "replacements": []
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "out_tampered": "/home/parker/Desktop/fbi/tampering/xtts-clean/df_sub068/audio0_tampered.wav",
+  "out_tampered_copy": "/home/parker/Desktop/fbi/tampering/xtts-clean/df_sub068/temp_work_20251119T053649Z_1244/audio0_tampered.wav",
+  "metadata": {
+    "target_copy": "xtts-clean/df_sub068/temp_work_20251119T053649Z_1244/audio0.wav",
+    "donor_copy": "xtts-clean/df_sub068/temp_work_20251119T053649Z_1244/resampled.wav",
+    "replacements": [
+      {
+        "index": 0,
+        "word": "one",
+        "target_start": 7.6117647058823525,
+        "target_end": 7.872941176470587,
+        "donor_start": 191.52,
+        "donor_end": 191.88000000000002,
+        "target_segment_file": "extracted_segments/00_target_one_121788_125967.wav",
+        "donor_segment_file": "extracted_segments/00_donor_one_3064320_3070080.wav",
+        "donor_matched_file": "processed_segments/00_donor_matched_one.wav",
+        "applied_duration_s": 0.2611875
+      },
+      {
+        "index": 1,
+        "word": "then",
+        "target_start": 6.305882352941176,
+        "target_end": 6.567058823529411,
+        "donor_start": 81.99076923076923,
+        "donor_end": 82.52307692307693,
+        "target_segment_file": "extracted_segments/01_target_then_100894_105073.wav",
+        "donor_segment_file": "extracted_segments/01_donor_then_1311852_1320369.wav",
+        "donor_matched_file": "processed_segments/01_donor_matched_then.wav",
+        "applied_duration_s": 0.2611875
+      },
+      {
+        "index": 2,
+        "word": "under",
+        "target_start": 1.9444444444444446,
+        "target_end": 2.2222222222222223,
+        "donor_start": 80.39384615384616,
+        "donor_end": 80.92615384615385,
+        "target_segment_file": "extracted_segments/02_target_under_31111_35556.wav",
+        "donor_segment_file": "extracted_segments/02_donor_under_1286302_1294818.wav",
+        "donor_matched_file": "processed_segments/02_donor_matched_under.wav",
+        "applied_duration_s": 0.27775
+      },
+      {
+        "index": 3,
+        "word": "back",
+        "target_start": 0.5555555555555556,
+        "target_end": 0.8333333333333334,
+        "donor_start": 429.7223529411765,
+        "donor_end": 430.00941176470593,
+        "target_segment_file": "extracted_segments/03_target_back_8889_13333.wav",
+        "donor_segment_file": "extracted_segments/03_donor_back_6875558_6880151.wav",
+        "donor_matched_file": "processed_segments/03_donor_matched_back.wav",
+        "applied_duration_s": 0.27775
+      },
+      {
+        "index": 4,
+        "word": "than",
+        "target_start": 8.656470588235294,
+        "target_end": 8.91764705882353,
+        "donor_start": 367.0917647058823,
+        "donor_end": 367.50117647058823,
+        "target_segment_file": "extracted_segments/04_target_than_138504_142682.wav",
+        "donor_segment_file": "extracted_segments/04_donor_than_5873468_5880019.wav",
+        "donor_matched_file": "processed_segments/04_donor_matched_than.wav",
+        "applied_duration_s": 0.2611875
+      },
+      {
+        "index": 5,
+        "word": "up",
+        "target_start": 6.567058823529411,
+        "target_end": 6.828235294117646,
+        "donor_start": 303.9353846153846,
+        "donor_end": 304.31692307692305,
+        "target_segment_file": "extracted_segments/05_target_up_105073_109252.wav",
+        "donor_segment_file": "extracted_segments/05_donor_up_4862966_4869071.wav",
+        "donor_matched_file": "processed_segments/05_donor_matched_up.wav",
+        "applied_duration_s": 0.2611875
+      },
+      {
+        "index": 6,
+        "word": "out",
+        "target_start": 10.64,
+        "target_end": 10.88,
+        "donor_start": 40.78285714285714,
+        "donor_end": 41.15428571428571,
+        "target_segment_file": "extracted_segments/06_target_out_170240_174080.wav",
+        "donor_segment_file": "extracted_segments/06_donor_out_652526_658469.wav",
+        "donor_matched_file": "processed_segments/06_donor_matched_out.wav",
+        "applied_duration_s": 0.24
+      }
+    ]
+  }
+}

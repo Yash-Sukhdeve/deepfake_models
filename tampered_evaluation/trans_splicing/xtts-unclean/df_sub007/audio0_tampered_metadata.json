@@ -1,0 +1,58 @@
+{
+  "out_tampered": "/home/parker/Desktop/fbi/tampering/xtts-unclean/df_sub007/audio0_tampered.wav",
+  "out_tampered_copy": "/home/parker/Desktop/fbi/tampering/xtts-unclean/df_sub007/temp_work_20251119T074913Z_6974/audio0_tampered.wav",
+  "metadata": {
+    "target_copy": "xtts-unclean/df_sub007/temp_work_20251119T074913Z_6974/audio0.wav",
+    "donor_copy": "xtts-unclean/df_sub007/temp_work_20251119T074913Z_6974/resampled.wav",
+    "replacements": [
+      {
+        "index": 1,
+        "word": "want",
+        "target_start": 14.142857142857142,
+        "target_end": 14.545714285714284,
+        "donor_start": 223.4088888888889,
+        "donor_end": 223.88444444444445,
+        "target_segment_file": "extracted_segments/01_target_want_226286_232731.wav",
+        "donor_segment_file": "extracted_segments/01_donor_want_3574542_3582151.wav",
+        "donor_matched_file": "processed_segments/01_donor_matched_want.wav",
+        "applied_duration_s": 0.402875
+      },
+      {
+        "index": 3,
+        "word": "something",
+        "target_start": 15.754285714285714,
+        "target_end": 16.15714285714286,
+        "donor_start": 232.66857142857145,
+        "donor_end": 233.4914285714286,
+        "target_segment_file": "extracted_segments/03_target_something_252069_258514.wav",
+        "donor_segment_file": "extracted_segments/03_donor_something_3722697_3735863.wav",
+        "donor_matched_file": "processed_segments/03_donor_matched_something.wav",
+        "applied_duration_s": 0.402875
+      },
+      {
+        "index": 4,
+        "word": "clearly.",
+        "target_start": 11.005714285714285,
+        "target_end": 11.66,
+        "donor_start": 167.81333333333333,
+        "donor_end": 168.52,
+        "target_segment_file": "extracted_segments/04_target_clearly._176091_186560.wav",
+        "donor_segment_file": "extracted_segments/04_donor_clearly._2685013_2696320.wav",
+        "donor_matched_file": "processed_segments/04_donor_matched_clearly..wav",
+        "applied_duration_s": 0.6543125
+      },
+      {
+        "index": 5,
+        "word": "always",
+        "target_start": 16.904999999999998,
+        "target_end": 17.249999999999996,
+        "donor_start": 259.3066666666667,
+        "donor_end": 259.76,
+        "target_segment_file": "extracted_segments/05_target_always_270480_276000.wav",
+        "donor_segment_file": "extracted_segments/05_donor_always_4148907_4156160.wav",
+        "donor_matched_file": "processed_segments/05_donor_matched_always.wav",
+        "applied_duration_s": 0.345
+      }
+    ]
+  }
+}

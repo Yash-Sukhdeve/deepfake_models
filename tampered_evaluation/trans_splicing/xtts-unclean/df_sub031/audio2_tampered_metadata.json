@@ -1,0 +1,58 @@
+{
+  "out_tampered": "/home/parker/Desktop/fbi/tampering/xtts-unclean/df_sub031/audio2_tampered.wav",
+  "out_tampered_copy": "/home/parker/Desktop/fbi/tampering/xtts-unclean/df_sub031/temp_work_20251119T111542Z_6387/audio2_tampered.wav",
+  "metadata": {
+    "target_copy": "xtts-unclean/df_sub031/temp_work_20251119T111542Z_6387/audio2.wav",
+    "donor_copy": "xtts-unclean/df_sub031/temp_work_20251119T111542Z_6387/resampled.wav",
+    "replacements": [
+      {
+        "index": 0,
+        "word": "light",
+        "target_start": 4.0476190476190474,
+        "target_end": 4.285714285714286,
+        "donor_start": 9.44,
+        "donor_end": 9.879999999999999,
+        "target_segment_file": "extracted_segments/00_target_light_64762_68571.wav",
+        "donor_segment_file": "extracted_segments/00_donor_light_151040_158080.wav",
+        "donor_matched_file": "processed_segments/00_donor_matched_light.wav",
+        "applied_duration_s": 0.238125
+      },
+      {
+        "index": 1,
+        "word": "back",
+        "target_start": 0.47619047619047616,
+        "target_end": 0.7142857142857142,
+        "donor_start": 379.74,
+        "donor_end": 380.11333333333334,
+        "target_segment_file": "extracted_segments/01_target_back_7619_11429.wav",
+        "donor_segment_file": "extracted_segments/01_donor_back_6075840_6081813.wav",
+        "donor_matched_file": "processed_segments/01_donor_matched_back.wav",
+        "applied_duration_s": 0.238125
+      },
+      {
+        "index": 2,
+        "word": "under",
+        "target_start": 1.6666666666666665,
+        "target_end": 1.9047619047619047,
+        "donor_start": 81.664,
+        "donor_end": 82.07600000000001,
+        "target_segment_file": "extracted_segments/02_target_under_26667_30476.wav",
+        "donor_segment_file": "extracted_segments/02_donor_under_1306624_1313216.wav",
+        "donor_matched_file": "processed_segments/02_donor_matched_under.wav",
+        "applied_duration_s": 0.238125
+      },
+      {
+        "index": 3,
+        "word": "light.",
+        "target_start": 4.761904761904762,
+        "target_end": 5.0,
+        "donor_start": 289.8384615384615,
+        "donor_end": 290.26,
+        "target_segment_file": "extracted_segments/03_target_light._76190_80000.wav",
+        "donor_segment_file": "extracted_segments/03_donor_light._4637415_4644160.wav",
+        "donor_matched_file": "processed_segments/03_donor_matched_light..wav",
+        "applied_duration_s": 0.238125
+      }
+    ]
+  }
+}

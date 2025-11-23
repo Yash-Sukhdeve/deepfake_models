@@ -105,6 +105,18 @@ temp/
 *.tmp
 *.bak
 
+# Claude Code and AI assistant files
+CLAUDE.md
+.claude/
+.cursorrules
+.cursor/
+AGENTS.md
+agents/
+
+# Auto-generated report scripts (internal use)
+generate_project_report.py
+project_report/
+
 # Keep these important files
 !README.md
 !requirements.txt

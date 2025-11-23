@@ -1,0 +1,58 @@
+{
+  "out_tampered": "/home/parker/Desktop/fbi/tampering/xtts-unclean/df_sub019/audio0_tampered.wav",
+  "out_tampered_copy": "/home/parker/Desktop/fbi/tampering/xtts-unclean/df_sub019/temp_work_20251119T092343Z_8719/audio0_tampered.wav",
+  "metadata": {
+    "target_copy": "xtts-unclean/df_sub019/temp_work_20251119T092343Z_8719/audio0.wav",
+    "donor_copy": "xtts-unclean/df_sub019/temp_work_20251119T092343Z_8719/resampled.wav",
+    "replacements": [
+      {
+        "index": 0,
+        "word": "under",
+        "target_start": 1.5555555555555554,
+        "target_end": 1.7777777777777777,
+        "donor_start": 57.496,
+        "donor_end": 57.904,
+        "target_segment_file": "extracted_segments/00_target_under_24889_28444.wav",
+        "donor_segment_file": "extracted_segments/00_donor_under_919936_926464.wav",
+        "donor_matched_file": "processed_segments/00_donor_matched_under.wav",
+        "applied_duration_s": 0.22225
+      },
+      {
+        "index": 1,
+        "word": "back",
+        "target_start": 0.4444444444444444,
+        "target_end": 0.6666666666666666,
+        "donor_start": 312.064,
+        "donor_end": 312.36800000000005,
+        "target_segment_file": "extracted_segments/01_target_back_7111_10667.wav",
+        "donor_segment_file": "extracted_segments/01_donor_back_4993024_4997888.wav",
+        "donor_matched_file": "processed_segments/01_donor_matched_back.wav",
+        "applied_duration_s": 0.22225
+      },
+      {
+        "index": 2,
+        "word": "down",
+        "target_start": 0.6666666666666666,
+        "target_end": 0.8888888888888888,
+        "donor_start": 326.3015384615385,
+        "donor_end": 326.5323076923077,
+        "target_segment_file": "extracted_segments/02_target_down_10667_14222.wav",
+        "donor_segment_file": "extracted_segments/02_donor_down_5220825_5224517.wav",
+        "donor_matched_file": "processed_segments/02_donor_matched_down.wav",
+        "applied_duration_s": 0.22225
+      },
+      {
+        "index": 3,
+        "word": "that's",
+        "target_start": 8.0,
+        "target_end": 8.5,
+        "donor_start": 186.705,
+        "donor_end": 187.05,
+        "target_segment_file": "extracted_segments/03_target_that's_128000_136000.wav",
+        "donor_segment_file": "extracted_segments/03_donor_that's_2987280_2992800.wav",
+        "donor_matched_file": "processed_segments/03_donor_matched_that's.wav",
+        "applied_duration_s": 0.5
+      }
+    ]
+  }
+}

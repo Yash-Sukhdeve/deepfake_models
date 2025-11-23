@@ -1,0 +1,402 @@
+[
+  {
+    "file_path": "/home/lab2208/Documents/deepfake_models/tampered_evaluation/semantic/tampered/df_sub096_result_3_T010_M_DEL_closer.wav",
+    "source_audio": "df_sub096_result_3",
+    "label": "spoof",
+    "tamper_type": "deletion",
+    "difficulty": "medium",
+    "word": "closer"
+  },
+  {
+    "file_path": "/home/lab2208/Documents/deepfake_models/tampered_evaluation/semantic/tampered/df_sub096_result_3_T009_M_DEL_down.wav",
+    "source_audio": "df_sub096_result_3",
+    "label": "spoof",
+    "tamper_type": "deletion",
+    "difficulty": "medium",
+    "word": "down"
+  },
+  {
+    "file_path": "/home/lab2208/Documents/deepfake_models/tampered_evaluation/semantic/tampered/df_sub096_LP1_result_2_T007_M_DEL_down.wav",
+    "source_audio": "df_sub096_LP1_result_2",
+    "label": "spoof",
+    "tamper_type": "deletion",
+    "difficulty": "medium",
+    "word": "down"
+  },
+  {
+    "file_path": "/home/lab2208/Documents/deepfake_models/tampered_evaluation/semantic/tampered/df_sub096_LP1_result_2_T006_M_DEL_up.wav",
+    "source_audio": "df_sub096_LP1_result_2",
+    "label": "spoof",
+    "tamper_type": "deletion",
+    "difficulty": "medium",
+    "word": "up"
+  },
+  {
+    "file_path": "/home/lab2208/Documents/deepfake_models/tampered_evaluation/semantic/tampered/df_sub096_LP1_result_3_T009_M_DEL_white.wav",
+    "source_audio": "df_sub096_LP1_result_3",
+    "label": "spoof",
+    "tamper_type": "deletion",
+    "difficulty": "medium",
+    "word": "white"
+  },
+  {
+    "file_path": "/home/lab2208/Documents/deepfake_models/tampered_evaluation/semantic/tampered/df_sub096_LP1_result_2_T008_M_DEL_closer.wav",
+    "source_audio": "df_sub096_LP1_result_2",
+    "label": "spoof",
+    "tamper_type": "deletion",
+    "difficulty": "medium",
+    "word": "closer"
+  },
+  {
+    "file_path": "/home/lab2208/Documents/deepfake_models/tampered_evaluation/semantic/tampered/df_sub096_LP1_result_1_T010_M_DEL_closer.wav",
+    "source_audio": "df_sub096_LP1_result_1",
+    "label": "spoof",
+    "tamper_type": "deletion",
+    "difficulty": "medium",
+    "word": "closer"
+  },
+  {
+    "file_path": "/home/lab2208/Documents/deepfake_models/tampered_evaluation/semantic/tampered/df_sub096_LP2_result_3_T008_M_DEL_down.wav",
+    "source_audio": "df_sub096_LP2_result_3",
+    "label": "spoof",
+    "tamper_type": "deletion",
+    "difficulty": "medium",
+    "word": "down"
+  },
+  {
+    "file_path": "/home/lab2208/Documents/deepfake_models/tampered_evaluation/semantic/tampered/df_sub096_LP1_result_1_T008_M_DEL_down.wav",
+    "source_audio": "df_sub096_LP1_result_1",
+    "label": "spoof",
+    "tamper_type": "deletion",
+    "difficulty": "medium",
+    "word": "down"
+  },
+  {
+    "file_path": "/home/lab2208/Documents/deepfake_models/tampered_evaluation/semantic/tampered/df_sub096_result_1_T009_M_DEL_then.wav",
+    "source_audio": "df_sub096_result_1",
+    "label": "spoof",
+    "tamper_type": "deletion",
+    "difficulty": "medium",
+    "word": "then"
+  },
+  {
+    "file_path": "/home/lab2208/Documents/deepfake_models/tampered_evaluation/semantic/tampered/df_sub096_LP1_result_3_T006_M_DEL_back.wav",
+    "source_audio": "df_sub096_LP1_result_3",
+    "label": "spoof",
+    "tamper_type": "deletion",
+    "difficulty": "medium",
+    "word": "back"
+  },
+  {
+    "file_path": "/home/lab2208/Documents/deepfake_models/tampered_evaluation/semantic/tampered/df_sub096_result_2_T010_M_DEL_now.wav",
+    "source_audio": "df_sub096_result_2",
+    "label": "spoof",
+    "tamper_type": "deletion",
+    "difficulty": "medium",
+    "word": "now"
+  },
+  {
+    "file_path": "/home/lab2208/Documents/deepfake_models/tampered_evaluation/semantic/tampered/df_sub096_result_1_T007_M_DEL_closer.wav",
+    "source_audio": "df_sub096_result_1",
+    "label": "spoof",
+    "tamper_type": "deletion",
+    "difficulty": "medium",
+    "word": "closer"
+  },
+  {
+    "file_path": "/home/lab2208/Documents/deepfake_models/tampered_evaluation/semantic/tampered/df_sub096_LP1_result_3_T010_M_DEL_brighter.wav",
+    "source_audio": "df_sub096_LP1_result_3",
+    "label": "spoof",
+    "tamper_type": "deletion",
+    "difficulty": "medium",
+    "word": "brighter"
+  },
+  {
+    "file_path": "/home/lab2208/Documents/deepfake_models/tampered_evaluation/semantic/tampered/df_sub096_LP2_result_1_T009_M_DEL_closer.wav",
+    "source_audio": "df_sub096_LP2_result_1",
+    "label": "spoof",
+    "tamper_type": "deletion",
+    "difficulty": "medium",
+    "word": "closer"
+  },
+  {
+    "file_path": "/home/lab2208/Documents/deepfake_models/tampered_evaluation/semantic/tampered/df_sub096_LP1_result_3_T008_M_DEL_closer.wav",
+    "source_audio": "df_sub096_LP1_result_3",
+    "label": "spoof",
+    "tamper_type": "deletion",
+    "difficulty": "medium",
+    "word": "closer"
+  },
+  {
+    "file_path": "/home/lab2208/Documents/deepfake_models/tampered_evaluation/semantic/tampered/df_sub096_result_2_T009_M_DEL_closer.wav",
+    "source_audio": "df_sub096_result_2",
+    "label": "spoof",
+    "tamper_type": "deletion",
+    "difficulty": "medium",
+    "word": "closer"
+  },
+  {
+    "file_path": "/home/lab2208/Documents/deepfake_models/tampered_evaluation/semantic/tampered/df_sub096_LP2_result_2_T010_M_DEL_closer.wav",
+    "source_audio": "df_sub096_LP2_result_2",
+    "label": "spoof",
+    "tamper_type": "deletion",
+    "difficulty": "medium",
+    "word": "closer"
+  },
+  {
+    "file_path": "/home/lab2208/Documents/deepfake_models/tampered_evaluation/semantic/tampered/df_sub096_LP2_result_1_T006_M_DEL_up.wav",
+    "source_audio": "df_sub096_LP2_result_1",
+    "label": "spoof",
+    "tamper_type": "deletion",
+    "difficulty": "medium",
+    "word": "up"
+  },
+  {
+    "file_path": "/home/lab2208/Documents/deepfake_models/tampered_evaluation/semantic/tampered/df_sub096_result_1_T010_M_DEL_up.wav",
+    "source_audio": "df_sub096_result_1",
+    "label": "spoof",
+    "tamper_type": "deletion",
+    "difficulty": "medium",
+    "word": "up"
+  },
+  {
+    "file_path": "/home/lab2208/Documents/deepfake_models/tampered_evaluation/semantic/tampered/df_sub096_LP2_result_3_T010_M_DEL_then.wav",
+    "source_audio": "df_sub096_LP2_result_3",
+    "label": "spoof",
+    "tamper_type": "deletion",
+    "difficulty": "medium",
+    "word": "then"
+  },
+  {
+    "file_path": "/home/lab2208/Documents/deepfake_models/tampered_evaluation/semantic/tampered/df_sub096_LP2_result_1_T008_M_DEL_down.wav",
+    "source_audio": "df_sub096_LP2_result_1",
+    "label": "spoof",
+    "tamper_type": "deletion",
+    "difficulty": "medium",
+    "word": "down"
+  },
+  {
+    "file_path": "/home/lab2208/Documents/deepfake_models/tampered_evaluation/semantic/tampered/df_sub096_LP1_result_1_T009_M_DEL_back.wav",
+    "source_audio": "df_sub096_LP1_result_1",
+    "label": "spoof",
+    "tamper_type": "deletion",
+    "difficulty": "medium",
+    "word": "back"
+  },
+  {
+    "file_path": "/home/lab2208/Documents/deepfake_models/tampered_evaluation/semantic/tampered/df_sub096_LP1_result_3_T007_M_DEL_down.wav",
+    "source_audio": "df_sub096_LP1_result_3",
+    "label": "spoof",
+    "tamper_type": "deletion",
+    "difficulty": "medium",
+    "word": "down"
+  },
+  {
+    "file_path": "/home/lab2208/Documents/deepfake_models/tampered_evaluation/semantic/tampered/df_sub096_LP2_result_2_T007_M_DEL_then.wav",
+    "source_audio": "df_sub096_LP2_result_2",
+    "label": "spoof",
+    "tamper_type": "deletion",
+    "difficulty": "medium",
+    "word": "then"
+  },
+  {
+    "file_path": "/home/lab2208/Documents/deepfake_models/tampered_evaluation/semantic/tampered/df_sub096_result_3_T008_M_DEL_back.wav",
+    "source_audio": "df_sub096_result_3",
+    "label": "spoof",
+    "tamper_type": "deletion",
+    "difficulty": "medium",
+    "word": "back"
+  },
+  {
+    "file_path": "/home/lab2208/Documents/deepfake_models/tampered_evaluation/semantic/tampered/df_sub096_result_1_T006_M_DEL_down.wav",
+    "source_audio": "df_sub096_result_1",
+    "label": "spoof",
+    "tamper_type": "deletion",
+    "difficulty": "medium",
+    "word": "down"
+  },
+  {
+    "file_path": "/home/lab2208/Documents/deepfake_models/tampered_evaluation/semantic/tampered/df_sub096_result_2_T008_M_DEL_down.wav",
+    "source_audio": "df_sub096_result_2",
+    "label": "spoof",
+    "tamper_type": "deletion",
+    "difficulty": "medium",
+    "word": "down"
+  },
+  {
+    "file_path": "/home/lab2208/Documents/deepfake_models/tampered_evaluation/semantic/tampered/df_sub096_result_1_T008_M_DEL_back.wav",
+    "source_audio": "df_sub096_result_1",
+    "label": "spoof",
+    "tamper_type": "deletion",
+    "difficulty": "medium",
+    "word": "back"
+  },
+  {
+    "file_path": "/home/lab2208/Documents/deepfake_models/tampered_evaluation/semantic/tampered/df_sub096_LP2_result_3_T009_M_DEL_up.wav",
+    "source_audio": "df_sub096_LP2_result_3",
+    "label": "spoof",
+    "tamper_type": "deletion",
+    "difficulty": "medium",
+    "word": "up"
+  },
+  {
+    "file_path": "/home/lab2208/Documents/deepfake_models/tampered_evaluation/semantic/tampered/df_sub096_LP2_result_2_T009_M_DEL_down.wav",
+    "source_audio": "df_sub096_LP2_result_2",
+    "label": "spoof",
+    "tamper_type": "deletion",
+    "difficulty": "medium",
+    "word": "down"
+  },
+  {
+    "file_path": "/home/lab2208/Documents/deepfake_models/tampered_evaluation/semantic/tampered/df_sub096_LP2_result_2_T008_M_DEL_back.wav",
+    "source_audio": "df_sub096_LP2_result_2",
+    "label": "spoof",
+    "tamper_type": "deletion",
+    "difficulty": "medium",
+    "word": "back"
+  },
+  {
+    "file_path": "/home/lab2208/Documents/deepfake_models/tampered_evaluation/semantic/tampered/df_sub096_LP2_result_2_T006_M_DEL_up.wav",
+    "source_audio": "df_sub096_LP2_result_2",
+    "label": "spoof",
+    "tamper_type": "deletion",
+    "difficulty": "medium",
+    "word": "up"
+  },
+  {
+    "file_path": "/home/lab2208/Documents/deepfake_models/tampered_evaluation/semantic/tampered/df_sub096_result_2_T007_M_DEL_back.wav",
+    "source_audio": "df_sub096_result_2",
+    "label": "spoof",
+    "tamper_type": "deletion",
+    "difficulty": "medium",
+    "word": "back"
+  },
+  {
+    "file_path": "/home/lab2208/Documents/deepfake_models/tampered_evaluation/semantic/tampered/df_sub096_LP1_result_1_T007_M_DEL_up.wav",
+    "source_audio": "df_sub096_LP1_result_1",
+    "label": "spoof",
+    "tamper_type": "deletion",
+    "difficulty": "medium",
+    "word": "up"
+  },
+  {
+    "file_path": "/home/lab2208/Documents/deepfake_models/tampered_evaluation/semantic/tampered/df_sub096_LP1_result_2_T010_M_DEL_brighter.wav",
+    "source_audio": "df_sub096_LP1_result_2",
+    "label": "spoof",
+    "tamper_type": "deletion",
+    "difficulty": "medium",
+    "word": "brighter"
+  },
+  {
+    "file_path": "/home/lab2208/Documents/deepfake_models/tampered_evaluation/semantic/tampered/df_sub096_result_3_T007_M_DEL_up.wav",
+    "source_audio": "df_sub096_result_3",
+    "label": "spoof",
+    "tamper_type": "deletion",
+    "difficulty": "medium",
+    "word": "up"
+  },
+  {
+    "file_path": "/home/lab2208/Documents/deepfake_models/tampered_evaluation/semantic/tampered/df_sub096_LP2_result_1_T007_M_DEL_back.wav",
+    "source_audio": "df_sub096_LP2_result_1",
+    "label": "spoof",
+    "tamper_type": "deletion",
+    "difficulty": "medium",
+    "word": "back"
+  },
+  {
+    "file_path": "/home/lab2208/Documents/deepfake_models/tampered_evaluation/semantic/tampered/df_sub096_LP2_result_3_T007_M_DEL_back.wav",
+    "source_audio": "df_sub096_LP2_result_3",
+    "label": "spoof",
+    "tamper_type": "deletion",
+    "difficulty": "medium",
+    "word": "back"
+  },
+  {
+    "file_path": "/home/lab2208/Documents/deepfake_models/tampered_evaluation/semantic/tampered/df_sub096_LP2_result_1_T010_M_DEL_Now.wav",
+    "source_audio": "df_sub096_LP2_result_1",
+    "label": "spoof",
+    "tamper_type": "deletion",
+    "difficulty": "medium",
+    "word": "Now"
+  },
+  {
+    "file_path": "/home/lab2208/Documents/deepfake_models/tampered_evaluation/semantic/tampered/df_sub096_LP1_result_2_T009_M_DEL_now.wav",
+    "source_audio": "df_sub096_LP1_result_2",
+    "label": "spoof",
+    "tamper_type": "deletion",
+    "difficulty": "medium",
+    "word": "now"
+  },
+  {
+    "file_path": "/home/lab2208/Documents/deepfake_models/tampered_evaluation/semantic/original/df_sub096_LP2_result_1.wav",
+    "source_audio": "df_sub096_LP2_result_1",
+    "label": "bonafide",
+    "tamper_type": "none",
+    "difficulty": "none",
+    "word": "none"
+  },
+  {
+    "file_path": "/home/lab2208/Documents/deepfake_models/tampered_evaluation/semantic/original/df_sub096_LP1_result_2.wav",
+    "source_audio": "df_sub096_LP1_result_2",
+    "label": "bonafide",
+    "tamper_type": "none",
+    "difficulty": "none",
+    "word": "none"
+  },
+  {
+    "file_path": "/home/lab2208/Documents/deepfake_models/tampered_evaluation/semantic/original/df_sub096_LP1_result_3.wav",
+    "source_audio": "df_sub096_LP1_result_3",
+    "label": "bonafide",
+    "tamper_type": "none",
+    "difficulty": "none",
+    "word": "none"
+  },
+  {
+    "file_path": "/home/lab2208/Documents/deepfake_models/tampered_evaluation/semantic/original/df_sub096_LP2_result_3.wav",
+    "source_audio": "df_sub096_LP2_result_3",
+    "label": "bonafide",
+    "tamper_type": "none",
+    "difficulty": "none",
+    "word": "none"
+  },
+  {
+    "file_path": "/home/lab2208/Documents/deepfake_models/tampered_evaluation/semantic/original/df_sub096_result_3.wav",
+    "source_audio": "df_sub096_result_3",
+    "label": "bonafide",
+    "tamper_type": "none",
+    "difficulty": "none",
+    "word": "none"
+  },
+  {
+    "file_path": "/home/lab2208/Documents/deepfake_models/tampered_evaluation/semantic/original/df_sub096_LP1_result_1.wav",
+    "source_audio": "df_sub096_LP1_result_1",
+    "label": "bonafide",
+    "tamper_type": "none",
+    "difficulty": "none",
+    "word": "none"
+  },
+  {
+    "file_path": "/home/lab2208/Documents/deepfake_models/tampered_evaluation/semantic/original/df_sub096_LP2_result_2.wav",
+    "source_audio": "df_sub096_LP2_result_2",
+    "label": "bonafide",
+    "tamper_type": "none",
+    "difficulty": "none",
+    "word": "none"
+  },
+  {
+    "file_path": "/home/lab2208/Documents/deepfake_models/tampered_evaluation/semantic/original/df_sub096_result_1.wav",
+    "source_audio": "df_sub096_result_1",
+    "label": "bonafide",
+    "tamper_type": "none",
+    "difficulty": "none",
+    "word": "none"
+  },
+  {
+    "file_path": "/home/lab2208/Documents/deepfake_models/tampered_evaluation/semantic/original/df_sub096_result_2.wav",
+    "source_audio": "df_sub096_result_2",
+    "label": "bonafide",
+    "tamper_type": "none",
+    "difficulty": "none",
+    "word": "none"
+  }
+]

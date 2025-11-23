@@ -1,0 +1,94 @@
+{
+  "out_tampered": "/home/parker/Desktop/fbi/tampering/yourtts-clean/df_sub092_LP1/audio2_tampered.wav",
+  "out_tampered_copy": "/home/parker/Desktop/fbi/tampering/yourtts-clean/df_sub092_LP1/temp_work_20251119T211945Z_4723/audio2_tampered.wav",
+  "metadata": {
+    "target_copy": "yourtts-clean/df_sub092_LP1/temp_work_20251119T211945Z_4723/audio2.wav",
+    "donor_copy": "yourtts-clean/df_sub092_LP1/temp_work_20251119T211945Z_4723/resampled.wav",
+    "replacements": [
+      {
+        "index": 0,
+        "word": "back",
+        "target_start": 0.5511111111111111,
+        "target_end": 0.8266666666666667,
+        "donor_start": 62.147999999999996,
+        "donor_end": 62.452,
+        "target_segment_file": "extracted_segments/00_target_back_8818_13227.wav",
+        "donor_segment_file": "extracted_segments/00_donor_back_994368_999232.wav",
+        "donor_matched_file": "processed_segments/00_donor_matched_back.wav",
+        "applied_duration_s": 0.2755625
+      },
+      {
+        "index": 1,
+        "word": "white",
+        "target_start": 19.973333333333333,
+        "target_end": 20.306666666666665,
+        "donor_start": 127.82,
+        "donor_end": 128.15333333333334,
+        "target_segment_file": "extracted_segments/01_target_white_319573_324907.wav",
+        "donor_segment_file": "extracted_segments/01_donor_white_2045120_2050453.wav",
+        "donor_matched_file": "processed_segments/01_donor_matched_white.wav",
+        "applied_duration_s": 0.3333125
+      },
+      {
+        "index": 2,
+        "word": "then",
+        "target_start": 6.43,
+        "target_end": 6.724,
+        "donor_start": 39.955999999999996,
+        "donor_end": 40.30799999999999,
+        "target_segment_file": "extracted_segments/02_target_then_102880_107584.wav",
+        "donor_segment_file": "extracted_segments/02_donor_then_639296_644928.wav",
+        "donor_matched_file": "processed_segments/02_donor_matched_then.wav",
+        "applied_duration_s": 0.294
+      },
+      {
+        "index": 3,
+        "word": "sat",
+        "target_start": 0.27555555555555555,
+        "target_end": 0.5511111111111111,
+        "donor_start": 174.67166666666665,
+        "donor_end": 174.9633333333333,
+        "target_segment_file": "extracted_segments/03_target_sat_4409_8818.wav",
+        "donor_segment_file": "extracted_segments/03_donor_sat_2794747_2799413.wav",
+        "donor_matched_file": "processed_segments/03_donor_matched_sat.wav",
+        "applied_duration_s": 0.2755625
+      },
+      {
+        "index": 5,
+        "word": "blinked",
+        "target_start": 10.786666666666667,
+        "target_end": 11.173333333333334,
+        "donor_start": 228.49428571428572,
+        "donor_end": 228.85142857142858,
+        "target_segment_file": "extracted_segments/05_target_blinked_172587_178773.wav",
+        "donor_segment_file": "extracted_segments/05_donor_blinked_3655909_3661623.wav",
+        "donor_matched_file": "processed_segments/05_donor_matched_blinked.wav",
+        "applied_duration_s": 0.3866875
+      },
+      {
+        "index": 6,
+        "word": "water,",
+        "target_start": 6.136,
+        "target_end": 6.43,
+        "donor_start": 225.98,
+        "donor_end": 226.28,
+        "target_segment_file": "extracted_segments/06_target_water,_98176_102880.wav",
+        "donor_segment_file": "extracted_segments/06_donor_water,_3615680_3620480.wav",
+        "donor_matched_file": "processed_segments/06_donor_matched_water,.wav",
+        "applied_duration_s": 0.294
+      },
+      {
+        "index": 7,
+        "word": "edge",
+        "target_start": 3.8577777777777778,
+        "target_end": 4.133333333333333,
+        "donor_start": 35.03176470588235,
+        "donor_end": 35.35411764705882,
+        "target_segment_file": "extracted_segments/07_target_edge_61724_66133.wav",
+        "donor_segment_file": "extracted_segments/07_donor_edge_560508_565666.wav",
+        "donor_matched_file": "processed_segments/07_donor_matched_edge.wav",
+        "applied_duration_s": 0.2755625
+      }
+    ]
+  }
+}

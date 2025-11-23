@@ -1,0 +1,118 @@
+{
+  "out_tampered": "/home/parker/Desktop/fbi/tampering/xtts-clean/df_sub069/audio0_tampered.wav",
+  "out_tampered_copy": "/home/parker/Desktop/fbi/tampering/xtts-clean/df_sub069/temp_work_20251119T034424Z_2925/audio0_tampered.wav",
+  "metadata": {
+    "target_copy": "xtts-clean/df_sub069/temp_work_20251119T034424Z_2925/audio0.wav",
+    "donor_copy": "xtts-clean/df_sub069/temp_work_20251119T034424Z_2925/resampled.wav",
+    "replacements": [
+      {
+        "index": 0,
+        "word": "than",
+        "target_start": 10.442666666666668,
+        "target_end": 10.821333333333335,
+        "donor_start": 356.0475,
+        "donor_end": 356.40500000000003,
+        "target_segment_file": "extracted_segments/00_target_than_167083_173141.wav",
+        "donor_segment_file": "extracted_segments/00_donor_than_5696760_5702480.wav",
+        "donor_matched_file": "processed_segments/00_donor_matched_than.wav",
+        "applied_duration_s": 0.3786875
+      },
+      {
+        "index": 1,
+        "word": "up",
+        "target_start": 7.413333333333334,
+        "target_end": 7.792000000000001,
+        "donor_start": 203.39999999999998,
+        "donor_end": 203.87999999999997,
+        "target_segment_file": "extracted_segments/01_target_up_118613_124672.wav",
+        "donor_segment_file": "extracted_segments/01_donor_up_3254400_3262080.wav",
+        "donor_matched_file": "processed_segments/01_donor_matched_up.wav",
+        "applied_duration_s": 0.3786875
+      },
+      {
+        "index": 2,
+        "word": "down",
+        "target_start": 0.96,
+        "target_end": 1.2,
+        "donor_start": 437.7422222222222,
+        "donor_end": 438.0933333333333,
+        "target_segment_file": "extracted_segments/02_target_down_15360_19200.wav",
+        "donor_segment_file": "extracted_segments/02_donor_down_7003876_7009493.wav",
+        "donor_matched_file": "processed_segments/02_donor_matched_down.wav",
+        "applied_duration_s": 0.24
+      },
+      {
+        "index": 3,
+        "word": "under",
+        "target_start": 1.92,
+        "target_end": 2.16,
+        "donor_start": 83.64,
+        "donor_end": 84.08,
+        "target_segment_file": "extracted_segments/03_target_under_30720_34560.wav",
+        "donor_segment_file": "extracted_segments/03_donor_under_1338240_1345280.wav",
+        "donor_matched_file": "processed_segments/03_donor_matched_under.wav",
+        "applied_duration_s": 0.24
+      },
+      {
+        "index": 4,
+        "word": "water",
+        "target_start": 7.034666666666667,
+        "target_end": 7.413333333333334,
+        "donor_start": 329.1488888888889,
+        "donor_end": 329.4666666666667,
+        "target_segment_file": "extracted_segments/04_target_water_112555_118613.wav",
+        "donor_segment_file": "extracted_segments/04_donor_water_5266382_5271467.wav",
+        "donor_matched_file": "processed_segments/04_donor_matched_water.wav",
+        "applied_duration_s": 0.3786875
+      },
+      {
+        "index": 5,
+        "word": "time",
+        "target_start": 1.44,
+        "target_end": 1.68,
+        "donor_start": 295.1733333333333,
+        "donor_end": 295.5066666666666,
+        "target_segment_file": "extracted_segments/05_target_time_23040_26880.wav",
+        "donor_segment_file": "extracted_segments/05_donor_time_4722773_4728107.wav",
+        "donor_matched_file": "processed_segments/05_donor_matched_time.wav",
+        "applied_duration_s": 0.24
+      },
+      {
+        "index": 6,
+        "word": "back",
+        "target_start": 0.72,
+        "target_end": 0.96,
+        "donor_start": 419.74,
+        "donor_end": 420.12333333333333,
+        "target_segment_file": "extracted_segments/06_target_back_11520_15360.wav",
+        "donor_segment_file": "extracted_segments/06_donor_back_6715840_6721973.wav",
+        "donor_matched_file": "processed_segments/06_donor_matched_back.wav",
+        "applied_duration_s": 0.24
+      },
+      {
+        "index": 7,
+        "word": "out",
+        "target_start": 12.967272727272729,
+        "target_end": 13.261818181818184,
+        "donor_start": 46.971428571428575,
+        "donor_end": 47.45714285714286,
+        "target_segment_file": "extracted_segments/07_target_out_207476_212189.wav",
+        "donor_segment_file": "extracted_segments/07_donor_out_751543_759314.wav",
+        "donor_matched_file": "processed_segments/07_donor_matched_out.wav",
+        "applied_duration_s": 0.2945625
+      },
+      {
+        "index": 8,
+        "word": "when",
+        "target_start": 8.928,
+        "target_end": 9.306666666666668,
+        "donor_start": 417.44,
+        "donor_end": 417.8233333333333,
+        "target_segment_file": "extracted_segments/08_target_when_142848_148907.wav",
+        "donor_segment_file": "extracted_segments/08_donor_when_6679040_6685173.wav",
+        "donor_matched_file": "processed_segments/08_donor_matched_when.wav",
+        "applied_duration_s": 0.3786875
+      }
+    ]
+  }
+}

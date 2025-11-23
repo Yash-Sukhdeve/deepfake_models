@@ -1,0 +1,94 @@
+{
+  "out_tampered": "/home/parker/Desktop/fbi/tampering/yourtts-clean/Subject22_Original_Mic2/audio1_tampered.wav",
+  "out_tampered_copy": "/home/parker/Desktop/fbi/tampering/yourtts-clean/Subject22_Original_Mic2/temp_work_20251119T212347Z_3825/audio1_tampered.wav",
+  "metadata": {
+    "target_copy": "yourtts-clean/Subject22_Original_Mic2/temp_work_20251119T212347Z_3825/audio1.wav",
+    "donor_copy": "yourtts-clean/Subject22_Original_Mic2/temp_work_20251119T212347Z_3825/resampled.wav",
+    "replacements": [
+      {
+        "index": 0,
+        "word": "than",
+        "target_start": 8.617142857142857,
+        "target_end": 8.971428571428572,
+        "donor_start": 123.52,
+        "donor_end": 123.8,
+        "target_segment_file": "extracted_segments/00_target_than_137874_143543.wav",
+        "donor_segment_file": "extracted_segments/00_donor_than_1976320_1980800.wav",
+        "donor_matched_file": "processed_segments/00_donor_matched_than.wav",
+        "applied_duration_s": 0.3543125
+      },
+      {
+        "index": 3,
+        "word": "just",
+        "target_start": 18.0,
+        "target_end": 18.333333333333332,
+        "donor_start": 4.845714285714286,
+        "donor_end": 5.451428571428572,
+        "target_segment_file": "extracted_segments/03_target_just_288000_293333.wav",
+        "donor_segment_file": "extracted_segments/03_donor_just_77531_87223.wav",
+        "donor_matched_file": "processed_segments/03_donor_matched_just.wav",
+        "applied_duration_s": 0.3333125
+      },
+      {
+        "index": 4,
+        "word": "back",
+        "target_start": 0.5022222222222222,
+        "target_end": 0.7533333333333334,
+        "donor_start": 299.20000000000005,
+        "donor_end": 299.5146666666667,
+        "target_segment_file": "extracted_segments/04_target_back_8036_12053.wav",
+        "donor_segment_file": "extracted_segments/04_donor_back_4787200_4792235.wav",
+        "donor_matched_file": "processed_segments/04_donor_matched_back.wav",
+        "applied_duration_s": 0.251125
+      },
+      {
+        "index": 6,
+        "word": "out",
+        "target_start": 11.8,
+        "target_end": 12.100000000000001,
+        "donor_start": 54.305882352941175,
+        "donor_end": 54.548235294117646,
+        "target_segment_file": "extracted_segments/06_target_out_188800_193600.wav",
+        "donor_segment_file": "extracted_segments/06_donor_out_868894_872772.wav",
+        "donor_matched_file": "processed_segments/06_donor_matched_out.wav",
+        "applied_duration_s": 0.3
+      },
+      {
+        "index": 7,
+        "word": "not",
+        "target_start": 1.5066666666666668,
+        "target_end": 1.7577777777777779,
+        "donor_start": 12.64,
+        "donor_end": 12.970666666666668,
+        "target_segment_file": "extracted_segments/07_target_not_24107_28124.wav",
+        "donor_segment_file": "extracted_segments/07_donor_not_202240_207531.wav",
+        "donor_matched_file": "processed_segments/07_donor_matched_not.wav",
+        "applied_duration_s": 0.251125
+      },
+      {
+        "index": 8,
+        "word": "under",
+        "target_start": 1.7577777777777779,
+        "target_end": 2.008888888888889,
+        "donor_start": 1267.6266666666668,
+        "donor_end": 1267.9244444444446,
+        "target_segment_file": "extracted_segments/08_target_under_28124_32142.wav",
+        "donor_segment_file": "extracted_segments/08_donor_under_20282027_20286791.wav",
+        "donor_matched_file": "processed_segments/08_donor_matched_under.wav",
+        "applied_duration_s": 0.251125
+      },
+      {
+        "index": 9,
+        "word": "one",
+        "target_start": 7.2,
+        "target_end": 7.554285714285714,
+        "donor_start": 174.368,
+        "donor_end": 174.76,
+        "target_segment_file": "extracted_segments/09_target_one_115200_120869.wav",
+        "donor_segment_file": "extracted_segments/09_donor_one_2789888_2796160.wav",
+        "donor_matched_file": "processed_segments/09_donor_matched_one.wav",
+        "applied_duration_s": 0.3543125
+      }
+    ]
+  }
+}

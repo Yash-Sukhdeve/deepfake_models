@@ -1,0 +1,46 @@
+{
+  "out_tampered": "/home/parker/Desktop/fbi/tampering/yourtts-clean/df_sub073_extra/audio1_tampered.wav",
+  "out_tampered_copy": "/home/parker/Desktop/fbi/tampering/yourtts-clean/df_sub073_extra/temp_work_20251119T160138Z_8606/audio1_tampered.wav",
+  "metadata": {
+    "target_copy": "yourtts-clean/df_sub073_extra/temp_work_20251119T160138Z_8606/audio1.wav",
+    "donor_copy": "yourtts-clean/df_sub073_extra/temp_work_20251119T160138Z_8606/resampled.wav",
+    "replacements": [
+      {
+        "index": 0,
+        "word": "under",
+        "target_start": 2.5044444444444447,
+        "target_end": 2.8622222222222224,
+        "donor_start": 73.024,
+        "donor_end": 73.416,
+        "target_segment_file": "extracted_segments/00_target_under_40071_45796.wav",
+        "donor_segment_file": "extracted_segments/00_donor_under_1168384_1174656.wav",
+        "donor_matched_file": "processed_segments/00_donor_matched_under.wav",
+        "applied_duration_s": 0.35775
+      },
+      {
+        "index": 1,
+        "word": "out",
+        "target_start": 15.253333333333334,
+        "target_end": 15.600000000000001,
+        "donor_start": 42.182857142857145,
+        "donor_end": 42.614285714285714,
+        "target_segment_file": "extracted_segments/01_target_out_244053_249600.wav",
+        "donor_segment_file": "extracted_segments/01_donor_out_674926_681829.wav",
+        "donor_matched_file": "processed_segments/01_donor_matched_out.wav",
+        "applied_duration_s": 0.3466875
+      },
+      {
+        "index": 2,
+        "word": "then",
+        "target_start": 8.200000000000001,
+        "target_end": 8.552000000000001,
+        "donor_start": 74.19999999999999,
+        "donor_end": 74.59199999999998,
+        "target_segment_file": "extracted_segments/02_target_then_131200_136832.wav",
+        "donor_segment_file": "extracted_segments/02_donor_then_1187200_1193472.wav",
+        "donor_matched_file": "processed_segments/02_donor_matched_then.wav",
+        "applied_duration_s": 0.352
+      }
+    ]
+  }
+}

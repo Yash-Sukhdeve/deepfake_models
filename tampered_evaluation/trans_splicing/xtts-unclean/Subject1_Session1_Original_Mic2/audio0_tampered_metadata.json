@@ -1,0 +1,46 @@
+{
+  "out_tampered": "/home/parker/Desktop/fbi/tampering/xtts-unclean/Subject1_Session1_Original_Mic2/audio0_tampered.wav",
+  "out_tampered_copy": "/home/parker/Desktop/fbi/tampering/xtts-unclean/Subject1_Session1_Original_Mic2/temp_work_20251119T103652Z_4130/audio0_tampered.wav",
+  "metadata": {
+    "target_copy": "xtts-unclean/Subject1_Session1_Original_Mic2/temp_work_20251119T103652Z_4130/audio0.wav",
+    "donor_copy": "xtts-unclean/Subject1_Session1_Original_Mic2/temp_work_20251119T103652Z_4130/resampled.wav",
+    "replacements": [
+      {
+        "index": 0,
+        "word": "look",
+        "target_start": 1.435,
+        "target_end": 2.1525,
+        "donor_start": 510.96285714285716,
+        "donor_end": 511.66857142857145,
+        "target_segment_file": "extracted_segments/00_target_look_22960_34440.wav",
+        "donor_segment_file": "extracted_segments/00_donor_look_8175406_8186697.wav",
+        "donor_matched_file": "processed_segments/00_donor_matched_look.wav",
+        "applied_duration_s": 0.7175
+      },
+      {
+        "index": 1,
+        "word": "right",
+        "target_start": 15.216000000000001,
+        "target_end": 15.754000000000001,
+        "donor_start": 70.34,
+        "donor_end": 71.34,
+        "target_segment_file": "extracted_segments/01_target_right_243456_252064.wav",
+        "donor_segment_file": "extracted_segments/01_donor_right_1125440_1141440.wav",
+        "donor_matched_file": "processed_segments/01_donor_matched_right.wav",
+        "applied_duration_s": 0.538
+      },
+      {
+        "index": 2,
+        "word": "look",
+        "target_start": 14.678,
+        "target_end": 15.216000000000001,
+        "donor_start": 510.96285714285716,
+        "donor_end": 511.66857142857145,
+        "target_segment_file": "extracted_segments/02_target_look_234848_243456.wav",
+        "donor_segment_file": "extracted_segments/02_donor_look_8175406_8186697.wav",
+        "donor_matched_file": "processed_segments/02_donor_matched_look.wav",
+        "applied_duration_s": 0.538
+      }
+    ]
+  }
+}

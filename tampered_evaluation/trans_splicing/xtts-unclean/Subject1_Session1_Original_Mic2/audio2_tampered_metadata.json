@@ -1,0 +1,94 @@
+{
+  "out_tampered": "/home/parker/Desktop/fbi/tampering/xtts-unclean/Subject1_Session1_Original_Mic2/audio2_tampered.wav",
+  "out_tampered_copy": "/home/parker/Desktop/fbi/tampering/xtts-unclean/Subject1_Session1_Original_Mic2/temp_work_20251119T110238Z_5643/audio2_tampered.wav",
+  "metadata": {
+    "target_copy": "xtts-unclean/Subject1_Session1_Original_Mic2/temp_work_20251119T110238Z_5643/audio2.wav",
+    "donor_copy": "xtts-unclean/Subject1_Session1_Original_Mic2/temp_work_20251119T110238Z_5643/resampled.wav",
+    "replacements": [
+      {
+        "index": 0,
+        "word": "look",
+        "target_start": 16.580000000000002,
+        "target_end": 17.080000000000002,
+        "donor_start": 619.1733333333334,
+        "donor_end": 619.6755555555557,
+        "target_segment_file": "extracted_segments/00_target_look_265280_273280.wav",
+        "donor_segment_file": "extracted_segments/00_donor_look_9906773_9914809.wav",
+        "donor_matched_file": "processed_segments/00_donor_matched_look.wav",
+        "applied_duration_s": 0.50225
+      },
+      {
+        "index": 1,
+        "word": "hold",
+        "target_start": 6.336,
+        "target_end": 6.864000000000001,
+        "donor_start": 1340.4555555555557,
+        "donor_end": 1341.0666666666668,
+        "target_segment_file": "extracted_segments/01_target_hold_101376_109824.wav",
+        "donor_segment_file": "extracted_segments/01_donor_hold_21447289_21457067.wav",
+        "donor_matched_file": "processed_segments/01_donor_matched_hold.wav",
+        "applied_duration_s": 0.528
+      },
+      {
+        "index": 2,
+        "word": "into",
+        "target_start": 2.112,
+        "target_end": 2.64,
+        "donor_start": 592.8800000000001,
+        "donor_end": 593.1550000000001,
+        "target_segment_file": "extracted_segments/02_target_into_33792_42240.wav",
+        "donor_segment_file": "extracted_segments/02_donor_into_9486080_9490480.wav",
+        "donor_matched_file": "processed_segments/02_donor_matched_into.wav",
+        "applied_duration_s": 0.528
+      },
+      {
+        "index": 3,
+        "word": "not",
+        "target_start": 0.528,
+        "target_end": 1.056,
+        "donor_start": 1360.025,
+        "donor_end": 1360.36875,
+        "target_segment_file": "extracted_segments/03_target_not_8448_16896.wav",
+        "donor_segment_file": "extracted_segments/03_donor_not_21760400_21765900.wav",
+        "donor_matched_file": "processed_segments/03_donor_matched_not.wav",
+        "applied_duration_s": 0.528
+      },
+      {
+        "index": 4,
+        "word": "that's",
+        "target_start": 20.080000000000002,
+        "target_end": 20.576,
+        "donor_start": 1129.661904761905,
+        "donor_end": 1130.1380952380953,
+        "target_segment_file": "extracted_segments/04_target_that's_321280_329216.wav",
+        "donor_segment_file": "extracted_segments/04_donor_that's_18074590_18082210.wav",
+        "donor_matched_file": "processed_segments/04_donor_matched_that's.wav",
+        "applied_duration_s": 0.496
+      },
+      {
+        "index": 5,
+        "word": "one",
+        "target_start": 7.92,
+        "target_end": 8.661818181818182,
+        "donor_start": 1148.383870967742,
+        "donor_end": 1148.6741935483872,
+        "target_segment_file": "extracted_segments/05_target_one_126720_138589.wav",
+        "donor_segment_file": "extracted_segments/05_donor_one_18374142_18378787.wav",
+        "donor_matched_file": "processed_segments/05_donor_matched_one.wav",
+        "applied_duration_s": 0.7418125
+      },
+      {
+        "index": 6,
+        "word": "not",
+        "target_start": 20.576,
+        "target_end": 21.072,
+        "donor_start": 1360.025,
+        "donor_end": 1360.36875,
+        "target_segment_file": "extracted_segments/06_target_not_329216_337152.wav",
+        "donor_segment_file": "extracted_segments/06_donor_not_21760400_21765900.wav",
+        "donor_matched_file": "processed_segments/06_donor_matched_not.wav",
+        "applied_duration_s": 0.496
+      }
+    ]
+  }
+}
