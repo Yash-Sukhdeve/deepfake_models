@@ -1,7 +1,6 @@
-# Audio Deepfake Detection: Project Documentation
+# Audio Deepfake and Tampering Detection: Project Documentation
 
-**Institution**: [Your Institution]
-**Project Duration**: 2024-2025
+**Institution**: Clarkson University
 **Last Updated**: November 2025
 
 ---
@@ -9,25 +8,29 @@
 ## Table of Contents
 
 **Part I: Research Overview**
-1. [Executive Summary](#1-executive-summary)
-2. [Research Objectives](#2-research-objectives)
-3. [Datasets](#3-datasets)
-4. [Model Architectures](#4-model-architectures)
-5. [Audio Tampering Methodology](#5-audio-tampering-methodology)
-6. [Training Methodology](#6-training-methodology)
-7. [Experimental Results](#7-experimental-results)
-8. [Key Findings](#8-key-findings)
+
+1. [Executive Summary](#executive-summary)
+2. [Research Objectives](#research-objectives)
+3. [Datasets](#datasets)
+4. [Model Architectures](#model-architectures)
+5. [Audio Tampering Methodology](#audio-tampering-methodology)
+6. [Training Methodology](#training-methodology)
+7. [Experimental Results](#experimental-results)
+8. [Key Findings](#key-findings)
 
 **Part II: Reproducibility Guide**
-9. [Environment Setup](#9-environment-setup)
-10. [Dataset Preparation](#10-dataset-preparation)
-11. [Training Procedures](#11-training-procedures)
-12. [Evaluation Procedures](#12-evaluation-procedures)
-13. [GUI Applications](#13-gui-applications)
-14. [Troubleshooting](#14-troubleshooting)
 
-**Part III: References**
-15. [Scientific Citations](#15-scientific-citations)
+9. [Environment Setup](#environment-setup)
+10. [Dataset Preparation](#dataset-preparation)
+11. [Training Procedures](#training-procedures)
+12. [Evaluation Procedures](#evaluation-procedures)
+13. [GUI Applications](#gui-applications)
+14. [Troubleshooting](#troubleshooting)
+
+**Part III: References & Code**
+
+15. [Scientific Citations](#scientific-citations)
+16. [Code Availability](#code-availability)
 
 ---
 
@@ -37,7 +40,7 @@
 
 This project implements and evaluates two state-of-the-art audio deepfake detection systems on standard benchmarks and novel tampering attacks. The research demonstrates that self-supervised pre-training significantly improves detection robustness across diverse conditions.
 
-### Key Results
+### Key Results Summary
 
 | Model | ASVspoof 2019 LA | ASVspoof 2021 LA | Trans-Splicing Detection |
 |-------|------------------|------------------|--------------------------|
@@ -55,6 +58,12 @@ This project implements and evaluates two state-of-the-art audio deepfake detect
    - Semantic Tampering Dataset: 50 files with NLP-guided audio modifications
 
 4. **Interactive GUI Applications**: Developed user-friendly interfaces for both models
+
+### Major Finding
+
+**XLS-R + SLS outperforms AASIST on BOTH clean and codec-distorted datasets:**
+- ASVspoof 2019 LA: 0.26% vs 0.83% (3.2x improvement)
+- ASVspoof 2021 LA: 2.97% vs 48.27% (16.3x improvement)
 
 ---
 
@@ -103,6 +112,7 @@ Audio deepfakes pose significant threats to:
 | Eval | 14,816 | 133,360 | 148,176 |
 
 **Codec Distribution**:
+
 | Codec | Percentage | Description |
 |-------|------------|-------------|
 | ulaw | 15.9% | G.711 mu-law |
@@ -113,7 +123,7 @@ Audio deepfakes pose significant threats to:
 | pstn | 13.1% | Simulated PSTN |
 | g722 | 13.1% | G.722 wideband |
 
-**Key Challenge**: 86.9% of evaluation samples contain codec distortion.
+**Key Challenge**: 86.9% of evaluation samples contain codec distortion, making this dataset significantly more challenging than ASVspoof 2019.
 
 ### 3.3 Trans-Splicing Dataset (In-House)
 
@@ -136,7 +146,21 @@ Audio deepfakes pose significant threats to:
 
 ## 4. Model Architectures
 
-### 4.1 AASIST
+### 4.1 Architecture Comparison
+
+| Feature | AASIST | XLS-R + SLS |
+|---------|--------|-------------|
+| Architecture | Graph Attention Networks | Wav2Vec 2.0 + SLS Module |
+| Pre-training | None (from scratch) | 436K hours self-supervised |
+| Parameters | ~300K | ~340M |
+| Input | Raw waveform (64,600 samples) | Raw waveform (64,600 samples) |
+| Feature Extraction | Sinc Convolution | Contrastive Learning |
+| Classifier | Heterogeneous GAT | Layer Selection + FC |
+| Training Epochs | 100 | 4 (early stopped at 2) |
+| ASVspoof 2019 EER | 0.83% | **0.26% (BEST)** |
+| ASVspoof 2021 LA EER | 48.27% | **2.97%** |
+
+### 4.2 AASIST Architecture
 
 **Reference**: Jung et al., "AASIST: Audio anti-spoofing using integrated spectro-temporal graph attention networks", IEEE/ACM TASLP 2022
 
@@ -167,7 +191,7 @@ Classification Head → [Bonafide, Spoof]
 
 **Parameters**: ~297,866 trainable parameters
 
-### 4.2 XLS-R + SLS
+### 4.3 XLS-R + SLS Architecture
 
 **Reference**: Zhang et al., "Audio Deepfake Detection with Self-supervised XLS-R and SLS classifier", ACM MM 2024
 
@@ -196,7 +220,13 @@ Classification Head → [Bonafide, Spoof]
 
 ### 5.1 Trans-Splicing Pipeline
 
-Trans-splicing creates tampered audio by replacing specific words with TTS-generated alternatives:
+Trans-splicing creates tampered audio by replacing specific words with TTS-generated alternatives.
+
+![Trans-Splicing Pipeline Diagram](figures/trans_splicing_diagram.png)
+
+*Figure 5.1: Trans-splicing pipeline showing word-level replacement with TTS-generated segments.*
+
+**Pipeline Steps**:
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -229,7 +259,11 @@ Trans-splicing creates tampered audio by replacing specific words with TTS-gener
 | **XTTS** | Coqui X-TTS multilingual model | Zero-shot from ~10s reference audio |
 | **YourTTS** | Multi-speaker TTS (Casanova et al., 2022) | Cross-lingual voice conversion |
 
-### 5.3 Phoneme-Boundary Editing
+### 5.3 Semantic Tampering Pipeline
+
+![Semantic Tampering Pipeline Diagram](figures/semantic_tampering_diagram.png)
+
+*Figure 5.2: Semantic tampering pipeline showing NLP-guided phoneme-boundary editing.*
 
 For semantic tampering, edits are made at phoneme boundaries to minimize artifacts:
 
@@ -240,6 +274,7 @@ For semantic tampering, edits are made at phoneme boundaries to minimize artifac
 - **librosa**: Prosody analysis (F0, energy, duration)
 
 **Tampering Operations**:
+
 | Operation | Description | Example |
 |-----------|-------------|---------|
 | Deletion | Remove adjectives/adverbs | "always on" → "on" |
@@ -250,88 +285,182 @@ For semantic tampering, edits are made at phoneme boundaries to minimize artifac
 
 ## 6. Training Methodology
 
-### 6.1 AASIST Training
+### 6.1 AASIST Training Configuration
 
-**Configuration**:
-```
-Dataset: ASVspoof 2019 LA
-Batch Size: 24
-Epochs: 100
-Loss: Weighted Cross-Entropy [0.1, 0.9]
-Optimizer: Adam
-Learning Rate: 1e-4 → 5e-6 (cosine annealing)
-Weight Decay: 1e-4
-Input Length: 64,600 samples (~4 seconds)
-Hardware: NVIDIA RTX 4080 (16GB)
-Training Time: ~14 hours
-```
+| Parameter | Value |
+|-----------|-------|
+| Batch Size | 24 |
+| Epochs | 100 |
+| Learning Rate | 1e-4 |
+| LR Min | 5e-6 |
+| Optimizer | Adam |
+| Scheduler | Cosine Annealing |
+| Weight Decay | 1e-4 |
+| Loss | Weighted CE [0.1, 0.9] |
+| Input Samples | 64,600 |
+| Sample Rate | 16 kHz |
+| First Conv | 128 |
+| GAT Dims | [64, 32] |
+| Pool Ratios | [0.5, 0.7, 0.5, 0.5] |
+| Hardware | NVIDIA RTX 4080 (16GB) |
+| Training Time | ~14 hours |
 
-**Training Results**:
-- Best Dev EER: 0.354% (epoch 97)
-- Best Eval t-DCF: 0.0384 (epoch 44)
-- Final Model: SWA (Stochastic Weight Averaging)
+**Training Progress**:
+- Epoch 13: Best EER 3.03%, t-DCF 0.0796
+- Epoch 21: Best EER 2.20%, t-DCF 0.0615
+- Epoch 44: Best EER 1.32%, t-DCF 0.0384 (Best t-DCF)
+- Epoch 97: Best EER 0.35%
+- Final (SWA): EER 1.73%, t-DCF 0.0559
 
-### 6.2 XLS-R + SLS Training
+### 6.2 XLS-R + SLS Training Configuration
 
-**Configuration**:
-```
-Dataset: ASVspoof 2019 LA
-Batch Size: 5
-Epochs: 4 (early stopping)
-Loss: Weighted Cross-Entropy [0.1, 0.9]
-Optimizer: Adam
-Learning Rate: 1e-6
-Data Augmentation: RawBoost Algorithm 3 (SSI colored noise)
-Input Length: 64,600 samples (~4 seconds)
-Hardware: NVIDIA RTX 4080 (16GB)
-Training Time: ~70 minutes
-```
+| Parameter | Value |
+|-----------|-------|
+| Batch Size | 5 |
+| Epochs | 4 (best: 2) |
+| Learning Rate | 1e-6 |
+| Optimizer | Adam |
+| Loss | Weighted CE [0.1, 0.9] |
+| Early Stopping | Patience 1 |
+| Input Samples | 64,600 |
+| Sample Rate | 16 kHz |
+| Pre-trained Model | XLS-R 300M |
+| Pre-training Hours | 436,000 |
+| Pre-training Langs | 128 |
+| Data Augmentation | RawBoost Algo 3 |
+| Total Parameters | 340M |
+| Hardware | NVIDIA RTX 4080 (16GB) |
+| Training Time | ~70 minutes |
 
-**Training Results**:
-- Best Model: epoch_2.pth
-- Training Speed: 4.6-4.8 iterations/second
-- Early stopping prevented overfitting
+**Critical Finding - Overfitting Analysis**:
 
-**Critical Finding**: Extended training (100 epochs) degrades performance:
 | Metric | 4 Epochs | 100 Epochs |
 |--------|----------|------------|
 | EER | 2.97% | 44.24% |
 | Training Loss | 0.00165 | 0.00001 |
+| Status | **Optimal** | Overfitting |
+
+Lower training loss does NOT indicate better test performance. Early stopping is essential.
 
 ---
 
 ## 7. Experimental Results
 
-### 7.1 ASVspoof 2019 LA Evaluation
+### 7.1 Quantitative Results Summary
 
-| Model | EER (%) | min t-DCF | Notes |
-|-------|---------|-----------|-------|
-| **XLS-R + SLS** | **0.26** | N/A | Best overall |
-| AASIST (Pretrained) | 0.83 | 0.0275 | Official benchmark |
-| AASIST (Trained) | ~0.83 | ~0.03 | Reproduced |
+| Model | Dataset | EER (%) | min t-DCF | ROC AUC | Status |
+|-------|---------|---------|-----------|---------|--------|
+| AASIST (Pretrained) | ASVspoof 2019 LA | 0.83 | 0.0275 | N/A | Benchmark |
+| AASIST (Trained) | ASVspoof 2019 LA | ~0.83 | ~0.03 | N/A | Reproduced |
+| AASIST (Pretrained) | ASVspoof 2021 LA | 50.07 | 0.7704 | 0.51 | Failed |
+| AASIST (Trained) | ASVspoof 2021 LA | 48.27 | 0.7212 | 0.55 | Failed |
+| **XLS-R + SLS (4 ep)** | ASVspoof 2019 LA | **0.26** | N/A | 0.999 | **BEST** |
+| **XLS-R + SLS (4 ep)** | ASVspoof 2021 LA | **2.97** | **0.2674** | 0.996 | **BEST** |
+| XLS-R + SLS (Paper) | ASVspoof 2021 LA | 2.87 | N/A | N/A | Target |
+| XLS-R + SLS (100 ep) | ASVspoof 2021 LA | 44.24 | 0.6154 | 0.58 | Overfitting |
 
-### 7.2 ASVspoof 2021 LA Evaluation
+### 7.2 ROC Curve Comparison
 
-| Model | EER (%) | min t-DCF | Notes |
-|-------|---------|-----------|-------|
-| **XLS-R + SLS** | **2.97** | **0.2674** | Paper reproduced |
-| XLS-R (Paper Target) | 2.87 | N/A | Reference |
-| AASIST (Pretrained) | 50.07 | 0.7704 | Near-random |
-| AASIST (Trained) | 48.27 | 0.7212 | Codec failure |
+![ROC Curve Comparison](xls_r_sls/SLSforASVspoof-2021-DF/figures/roc_curve.png)
 
-### 7.3 Per-Codec Analysis (ASVspoof 2021 LA)
+*Figure 7.1: ROC Curve Comparison on ASVspoof 2021 LA. XLS-R + SLS achieves AUC=0.996, dramatically outperforming AASIST variants (AUC ~0.55-0.79).*
 
-| Codec | XLS-R EER (%) | AASIST EER (%) | Difference |
-|-------|---------------|----------------|------------|
-| alaw | 0.97 | 22.40 | +21.43% |
-| g722 | 0.72 | 24.98 | +24.26% |
-| gsm | 2.59 | 34.16 | +31.57% |
-| none | 0.36 | 22.40 | +22.04% |
-| opus | 2.41 | 36.17 | +33.75% |
-| pstn | 2.18 | 45.69 | +43.51% |
-| ulaw | 0.81 | 22.48 | +21.67% |
+**Key Observations**:
+- XLS-R + SLS curve hugs the top-left corner (near-perfect classification)
+- AASIST curves are close to diagonal (random classifier)
+- Self-supervised pre-training provides significant discriminative power
 
-### 7.4 Trans-Splicing Detection
+### 7.3 DET Curve Comparison
+
+![DET Curve Comparison](xls_r_sls/SLSforASVspoof-2021-DF/figures/det_curve.png)
+
+*Figure 7.2: Detection Error Tradeoff (DET) curves. Lower-left is better. XLS-R achieves 2.97% EER vs AASIST's 48%.*
+
+**Key Observations**:
+- XLS-R + SLS: EER = 2.97% (intersection with diagonal)
+- AASIST models: EER > 48% (near-random performance)
+- DET curves better visualize performance at low error rates
+
+### 7.4 Score Distribution Analysis
+
+![Score Distribution Comparison](xls_r_sls/SLSforASVspoof-2021-DF/figures/score_distribution.png)
+
+*Figure 7.3: Score distributions for bonafide and spoof samples. Clear separation indicates better discrimination.*
+
+**Score Statistics (XLS-R + SLS)**:
+
+| Class | Mean | Std | Min | Max | Median |
+|-------|------|-----|-----|-----|--------|
+| Bonafide | -0.29 | 1.48 | -14.92 | 0.00 | 0.00 |
+| Spoof | -13.52 | 3.57 | -19.20 | 0.00 | -14.39 |
+
+**Key Insight**: XLS-R produces well-separated score distributions with minimal overlap, enabling reliable threshold selection.
+
+### 7.5 Per-Codec EER Analysis (ASVspoof 2021 LA)
+
+![Per-Codec EER Comparison](xls_r_sls/SLSforASVspoof-2021-DF/figures/per_codec_eer.png)
+
+*Figure 7.4: Per-codec EER comparison showing XLS-R's superior codec robustness.*
+
+| Codec | XLS-R EER (%) | AASIST EER (%) | XLS-R Advantage |
+|-------|---------------|----------------|-----------------|
+| none (clean) | **0.36** | 22.40 | 62x better |
+| g722 | **0.72** | 24.98 | 35x better |
+| ulaw | **0.81** | 22.48 | 28x better |
+| alaw | **0.98** | 22.40 | 23x better |
+| pstn | **2.17** | 45.69 | 21x better |
+| opus | **2.42** | 36.17 | 15x better |
+| gsm | **2.59** | 34.16 | 13x better |
+
+**Key Finding**: XLS-R maintains <3% EER across ALL codec conditions while AASIST degrades to near-random performance (22-46% EER) on codec-distorted audio.
+
+### 7.6 Per-Attack EER Analysis
+
+![Per-Attack EER Analysis](xls_r_sls/SLSforASVspoof-2021-DF/figures/per_attack_eer.png)
+
+*Figure 7.5: Per-attack EER for XLS-R + SLS on ASVspoof 2021 LA (attacks A07-A19).*
+
+| Attack | EER (%) | Difficulty | Description |
+|--------|---------|------------|-------------|
+| A13 | 0.02 | Easy | Neural network TTS |
+| A09 | 0.27 | Easy | Vocoder-based |
+| A07 | 0.67 | Easy | TTS system |
+| A08 | 0.84 | Easy | TTS system |
+| A14 | 0.81 | Easy | Neural vocoder |
+| A16 | 1.26 | Easy | Voice conversion |
+| A15 | 1.49 | Easy | Voice conversion |
+| A17 | 1.74 | Easy | Hybrid system |
+| A19 | 1.78 | Easy | End-to-end |
+| A12 | 2.44 | Moderate | TTS + vocoder |
+| A18 | 2.77 | Moderate | Hybrid system |
+| A10 | 4.41 | Challenging | Neural TTS |
+| A11 | 5.22 | Challenging | Neural TTS |
+
+**Key Finding**: Most attacks (11/13) achieve <3% EER. Only A10 and A11 (neural TTS variants) present moderate challenge.
+
+### 7.7 Confusion Matrix
+
+![Confusion Matrix](xls_r_sls/SLSforASVspoof-2021-DF/figures/confusion_matrix.png)
+
+*Figure 7.6: Confusion matrix for XLS-R + SLS at EER threshold.*
+
+**Confusion Matrix at EER Threshold**:
+
+|  | Predicted Spoof | Predicted Bonafide |
+|---|---|---|
+| **Actual Spoof** | 129,399 (TP) | 3,961 (FN) |
+| **Actual Bonafide** | 440 (FP) | 14,376 (TN) |
+
+**Performance Metrics**:
+- Accuracy at EER: 97.03%
+- True Positive Rate (Spoof Detection): 97.03%
+- True Negative Rate (Bonafide Acceptance): 97.03%
+
+### 7.8 Trans-Splicing Detection Results
+
+![Tampering Detection Rates](figures/tampering_detection_rates.png)
+
+*Figure 7.7: Detection rates for trans-spliced audio across different TTS systems.*
 
 | Model | XTTS-Clean | XTTS-Unclean | YourTTS-Clean | YourTTS-Unclean | **Overall** |
 |-------|------------|--------------|---------------|-----------------|-------------|
@@ -339,13 +468,39 @@ Training Time: ~70 minutes
 | AASIST (Pretrained) | 13.44% | 11.42% | 88.62% | 59.95% | 42.96% |
 | AASIST (Trained) | 8.70% | 9.25% | 91.98% | 58.12% | 41.72% |
 
-### 7.5 Semantic Tampering (EER)
+### 7.9 Model Comparison on Tampering
+
+![Model Comparison on Tampering](figures/tampering_model_comparison.png)
+
+*Figure 7.8: Overall model comparison on trans-splicing detection.*
+
+**Key Observations**:
+- XLS-R achieves 95.45% overall detection rate
+- AASIST performs poorly on XTTS (~10% detection)
+- YourTTS easier to detect for all models
+
+### 7.10 TTS System Comparison
+
+![TTS Comparison](figures/tampering_tts_comparison.png)
+
+*Figure 7.9: Detection rates by TTS system showing XTTS is harder to detect.*
+
+**Key Finding**: XTTS-generated audio is significantly harder to detect than YourTTS:
+- XLS-R: 91% (XTTS) vs 100% (YourTTS)
+- AASIST: 10% (XTTS) vs 75% (YourTTS)
+
+### 7.11 Semantic Tampering Results
 
 | Model | EER (%) | Notes |
 |-------|---------|-------|
 | XLS-R + SLS | 44.44 | Domain mismatch |
 | AASIST (Pretrained) | 48.00 | Near-random |
 | AASIST (Trained) | 49.15 | Near-random |
+
+**Limitation**: All models struggle with semantic tampering due to:
+1. Domain mismatch (different source audio distribution)
+2. Subtle nature of phoneme-boundary edits
+3. Small dataset size (50 samples)
 
 ---
 
@@ -356,20 +511,28 @@ Training Time: ~70 minutes
 1. **Self-supervised pre-training is critical for robustness**
    - XLS-R maintains <3% EER across all codec conditions
    - AASIST fails on codec-distorted audio (22-46% EER)
+   - Pre-training on 436K hours provides codec-invariant representations
 
 2. **TTS-specific detection varies by system**
    - XTTS harder to detect than YourTTS for all models
    - XLS-R detects 91% XTTS vs AASIST's 10%
+   - Modern zero-shot TTS poses greater challenge
 
 3. **Overfitting in XLS-R fine-tuning**
    - Early stopping at 2-4 epochs is critical
    - Extended training (100 epochs) causes catastrophic forgetting
+   - Lower training loss ≠ better generalization
+
+4. **Codec sensitivity is AASIST's failure mode**
+   - Sinc filterbank learns spectral artifacts destroyed by lossy compression
+   - Even clean audio subset shows degraded performance (~22% EER)
 
 ### 8.2 Limitations
 
 1. Semantic tampering dataset shows domain mismatch (different source audio)
 2. Trans-splicing dataset lacks original bonafide samples for EER calculation
 3. Results specific to TTS systems used (XTTS, YourTTS)
+4. Models tested only on ASVspoof datasets
 
 ### 8.3 Recommendations
 
@@ -564,6 +727,8 @@ python eval_tampered.py --model all --dataset all
 
 ![AASIST GUI](figures/gui_aasist_detection.png)
 
+*Figure 13.1: AASIST single-file detection interface with waveform visualization.*
+
 **Launch Command**:
 ```bash
 cd aasist
@@ -580,6 +745,8 @@ python gradio_app.py --port 7860
 ### 13.2 AASIST Multi-Tab Interface
 
 ![AASIST Multi-Tab GUI](figures/gui_aasist_multitab.png)
+
+*Figure 13.2: AASIST multi-tab interface with batch processing and model comparison capabilities.*
 
 **Launch Command**:
 ```bash
@@ -598,6 +765,8 @@ python gradio_app_multitab.py --port 7860
 ### 13.3 XLS-R + SLS Interface
 
 ![XLS-R GUI](figures/gui_xlsr_detection.png)
+
+*Figure 13.3: XLS-R + SLS detection interface with color-coded results.*
 
 **Launch Command**:
 ```bash
@@ -742,12 +911,14 @@ deepfake_models/
 │   ├── models/                      # Model architectures
 │   │   └── weights/                 # Pretrained weights
 │   ├── exp_result/                  # Training outputs
+│   ├── results/                     # Evaluation results & plots
 │   ├── main.py                      # Training script
 │   ├── gradio_app.py               # Simple GUI
 │   └── gradio_app_multitab.py      # Multi-tab GUI
 ├── xls_r_sls/                       # XLS-R + SLS implementation
 │   └── SLSforASVspoof-2021-DF/
 │       ├── model.py                 # Model architecture
+│       ├── figures/                 # Evaluation visualizations
 │       ├── train_LA.sh             # Training script
 │       ├── gradio_app.py           # GUI application
 │       └── best_model_*.pth        # Best checkpoint
@@ -755,11 +926,69 @@ deepfake_models/
 │   ├── trans_splicing/             # Trans-splicing dataset
 │   ├── semantic/                    # Semantic tampering dataset
 │   └── eval_tampered.py            # Evaluation script
-├── figures/                         # Visualization outputs
+├── figures/                         # Project visualizations
+│   ├── gui_*.png                   # GUI screenshots
+│   ├── trans_splicing_diagram.png  # Pipeline diagram
+│   ├── semantic_tampering_diagram.png
+│   └── tampering_*.png             # Tampering evaluation plots
+├── project_report/                  # Generated reports
 └── data/                           # Datasets (not in repo)
 ```
 
 ---
 
-**Document Version**: 1.0
-**Last Updated**: November 2025
+## Code Availability
+
+### Project Repository
+
+**Main Repository**: https://github.com/Yash-Sukhdeve/deepfake_models
+
+This repository contains:
+- AASIST model implementation and pretrained weights
+- XLS-R + SLS model implementation
+- Tampering evaluation scripts
+- GUI applications for both models
+- All configuration files and training scripts
+
+### Tampering Dataset Repositories
+
+| Repository | Description | Files | URL |
+|------------|-------------|-------|-----|
+| **Audio-Tampering** | Trans-splicing dataset with TTS-generated word insertions using XTTS and YourTTS | 1,932 | https://github.com/AVHBAC/Audio-Tampering |
+| **Tampered_Deepfake** | Semantic tampering dataset with NLP-guided deletions, insertions, and substitutions at phoneme boundaries | 50 | https://github.com/Yash-Sukhdeve/Tampered_Deepfake |
+
+### External Model Repositories
+
+| Repository | Description | URL |
+|------------|-------------|-----|
+| **XLS-R + SLS** | Original implementation (Zhang et al., ACM MM 2024) | https://github.com/QiShanZhang/SLSforASVspoof-2021-DF |
+| **ASVspoof 2021 Baseline** | Official ASVspoof 2021 baseline with RawNet2 | https://github.com/asvspoof-challenge/2021 |
+| **RawGAT-ST** | Spectro-temporal graph attention networks for anti-spoofing | https://github.com/eurecom-asp/RawGAT-ST-antispoofing |
+| **Fairseq** | Facebook AI Research toolkit (XLS-R backbone) | https://github.com/pytorch/fairseq |
+
+### Tools and Libraries
+
+| Tool | Purpose | URL |
+|------|---------|-----|
+| **Coqui TTS (XTTS)** | Zero-shot multilingual TTS for trans-splicing | https://github.com/coqui-ai/TTS |
+| **YourTTS** | Multi-speaker TTS for voice cloning | https://github.com/Edresson/YourTTS |
+| **Montreal Forced Aligner** | Phoneme-level alignment for semantic tampering | https://github.com/MontrealCorpusTools/Montreal-Forced-Aligner |
+| **Whisper** | Word-level transcription and alignment | https://github.com/openai/whisper |
+
+---
+
+## Conclusions
+
+1. **Self-supervised pre-training dramatically improves** audio deepfake detection performance across diverse evaluation conditions.
+
+2. **XLS-R + SLS achieves 2.97% EER** on ASVspoof 2021 LA, successfully reproducing the ACM MM 2024 paper results (target: 2.87% EER).
+
+3. **AASIST fails to generalize** to ASVspoof 2021 due to codec sensitivity, despite achieving benchmark performance (0.83% EER) on ASVspoof 2019 LA.
+
+4. **The 87% of ASVspoof 2021 samples with codec distortion** expose models trained on clean audio - highlighting the importance of realistic evaluation.
+
+5. **Early stopping is critical**: Extended training leads to severe overfitting (2.97% → 44.24% EER for XLS-R + SLS after 100 epochs).
+
+6. **XLS-R + SLS detects 95.45%** of trans-spliced audio, significantly outperforming AASIST (41.72%).
+
+--- End of Report - November 2025

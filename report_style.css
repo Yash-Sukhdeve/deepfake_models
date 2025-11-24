@@ -1,0 +1,288 @@
+/* Professional PDF Stylesheet for Project Report */
+
+/* Page setup */
+@page {
+    size: A4;
+    margin: 2.5cm 2cm 2.5cm 2cm;
+
+    @bottom-center {
+        content: counter(page);
+        font-family: 'DejaVu Sans', Arial, sans-serif;
+        font-size: 10pt;
+        color: #555;
+    }
+
+    @top-center {
+        content: "Audio Deepfake and Tampering Detection";
+        font-family: 'DejaVu Sans', Arial, sans-serif;
+        font-size: 9pt;
+        color: #777;
+    }
+}
+
+@page :first {
+    @top-center {
+        content: none;
+    }
+}
+
+/* Base typography */
+body {
+    font-family: 'DejaVu Serif', Georgia, 'Times New Roman', serif;
+    font-size: 11pt;
+    line-height: 1.6;
+    color: #222;
+    text-align: justify;
+    hyphens: auto;
+}
+
+/* Headings */
+h1 {
+    font-family: 'DejaVu Sans', Arial, sans-serif;
+    font-size: 24pt;
+    font-weight: bold;
+    color: #1a365d;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    page-break-after: avoid;
+}
+
+h2 {
+    font-family: 'DejaVu Sans', Arial, sans-serif;
+    font-size: 16pt;
+    font-weight: bold;
+    color: #2c5282;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    border-bottom: 2px solid #3182ce;
+    padding-bottom: 0.3em;
+    page-break-after: avoid;
+}
+
+h3 {
+    font-family: 'DejaVu Sans', Arial, sans-serif;
+    font-size: 13pt;
+    font-weight: bold;
+    color: #2b6cb0;
+    margin-top: 1.2em;
+    margin-bottom: 0.4em;
+    page-break-after: avoid;
+}
+
+h4 {
+    font-family: 'DejaVu Sans', Arial, sans-serif;
+    font-size: 11pt;
+    font-weight: bold;
+    color: #3182ce;
+    margin-top: 1em;
+    margin-bottom: 0.3em;
+    page-break-after: avoid;
+}
+
+/* Part headers - add visual separation without forcing page breaks */
+h1:not(:first-of-type) {
+    margin-top: 2em;
+    padding-top: 1em;
+    border-top: 3px solid #2c5282;
+}
+
+/* Links */
+a {
+    color: #2b6cb0;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1em 0;
+    font-size: 10pt;
+    page-break-inside: avoid;
+}
+
+thead {
+    background-color: #2c5282;
+    color: white;
+}
+
+th {
+    padding: 10px 8px;
+    text-align: left;
+    font-weight: bold;
+    font-family: 'DejaVu Sans', Arial, sans-serif;
+}
+
+td {
+    padding: 8px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+tr:nth-child(even) {
+    background-color: #f7fafc;
+}
+
+tr:hover {
+    background-color: #edf2f7;
+}
+
+/* Code blocks and preformatted text */
+pre, code {
+    font-family: 'DejaVu Sans Mono', 'Courier New', monospace;
+    font-size: 9pt;
+    background-color: #f7fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+}
+
+pre {
+    padding: 1em;
+    overflow-x: auto;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    margin: 1em 0;
+}
+
+code {
+    padding: 0.2em 0.4em;
+}
+
+pre code {
+    padding: 0;
+    border: none;
+    background: none;
+}
+
+/* CRITICAL: Prevent figures and images from being cut */
+figure, img, .figure {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    max-width: 100%;
+    height: auto;
+}
+
+img {
+    display: block;
+    margin: 1em auto;
+    max-width: 95%;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    page-break-before: auto;
+    page-break-after: auto;
+}
+
+/* Figure captions */
+figcaption, p em:only-child {
+    font-size: 10pt;
+    color: #555;
+    text-align: center;
+    font-style: italic;
+    margin-top: 0.5em;
+    page-break-before: avoid;
+}
+
+/* Paragraphs following images should stay with them */
+img + p, figure + p {
+    page-break-before: avoid;
+}
+
+/* Block quotes */
+blockquote {
+    margin: 1em 2em;
+    padding-left: 1em;
+    border-left: 4px solid #3182ce;
+    color: #555;
+    font-style: italic;
+    page-break-inside: avoid;
+}
+
+/* Lists */
+ul, ol {
+    margin: 0.5em 0;
+    padding-left: 2em;
+}
+
+li {
+    margin: 0.3em 0;
+}
+
+/* Table of Contents styling */
+h2:first-of-type {
+    page-break-before: avoid;
+}
+
+/* Strong/bold text */
+strong, b {
+    font-weight: bold;
+    color: #1a202c;
+}
+
+/* Horizontal rules */
+hr {
+    border: none;
+    border-top: 2px solid #e2e8f0;
+    margin: 2em 0;
+}
+
+/* Sections that should stay together */
+h2 + *, h3 + *, h4 + * {
+    page-break-before: avoid;
+}
+
+/* BibTeX/Citations styling */
+pre:has(code) {
+    background-color: #f0f4f8;
+    border-left: 4px solid #3182ce;
+}
+
+/* Ensure large diagrams don't break */
+pre {
+    max-height: none;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+}
+
+/* Key results table styling */
+table:first-of-type {
+    margin-top: 1.5em;
+}
+
+/* Make sure consecutive elements stay together when needed */
+h2 + p, h3 + p, h4 + p {
+    page-break-before: avoid;
+}
+
+h2 + table, h3 + table, h4 + table {
+    page-break-before: avoid;
+}
+
+/* Print-specific adjustments */
+@media print {
+    body {
+        font-size: 11pt;
+    }
+
+    img {
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+    }
+
+    pre {
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+    }
+
+    table {
+        page-break-inside: avoid !important;
+    }
+
+    tr {
+        page-break-inside: avoid !important;
+    }
+}
